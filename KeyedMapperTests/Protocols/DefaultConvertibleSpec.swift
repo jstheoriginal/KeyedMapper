@@ -3,7 +3,7 @@ import Nimble
 @testable import KeyedMapper
 
 private enum DefaultConvertibleEnum: Int, DefaultConvertible {
-    case FirstCase = 0
+    case firstCase = 0
 }
 
 class DefaultConvertibleSpec: QuickSpec {
@@ -71,7 +71,7 @@ class DefaultConvertibleSpec: QuickSpec {
 
                     context("when the given value is a valid rawValue of the object") {
                         it("should return the converted object") {
-                            let expectedValue = DefaultConvertibleEnum.FirstCase.rawValue
+                            let expectedValue = DefaultConvertibleEnum.firstCase.rawValue
                             let type = DefaultConvertibleEnum.self
                             let actualValue = try! type.fromMap(expectedValue)
 
